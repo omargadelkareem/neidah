@@ -15,45 +15,49 @@ export default defineConfig({
         "pwa-512x512.png",
       ],
 
-      manifest: {
-        name: "نيده - كل خدمات بلدك",
-        short_name: "نيده",
+    manifest: {
+  id: "/",
 
-        description:
-          "منصة نيده للوصول إلى الخدمات والمحلات والصنايعية وأهم خدمات البلد.",
+  name: "نيده - كل خدمات البلد",
+  short_name: "نيده",
 
-        lang: "ar",
-        dir: "rtl",
+  description:
+    "منصة نيده للوصول إلى الخدمات والمحلات والصنايعية وأهم خدمات البلد.",
 
-        start_url: "/",
-        scope: "/",
+  lang: "ar",
+  dir: "rtl",
 
-        display: "standalone",
+  start_url: "/",
+  scope: "/",
 
-        background_color: "#f8f9f4",
-        theme_color: "#367b61",
+  display: "standalone",
 
-        orientation: "portrait",
+  orientation: "portrait",
 
-        icons: [
-          {
-            src: "/pwa-192x192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "/pwa-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
-          {
-            src: "/pwa-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-            purpose: "maskable",
-          },
-        ],
-      },
+  theme_color: "#367b61",
+  background_color: "#f8f9f4",
+
+  icons: [
+    {
+      src: "/pwa-192x192.png",
+      sizes: "192x192",
+      type: "image/png",
+      purpose: "any",
+    },
+    {
+      src: "/pwa-512x512.png",
+      sizes: "512x512",
+      type: "image/png",
+      purpose: "any",
+    },
+    {
+      src: "/pwa-512x512.png",
+      sizes: "512x512",
+      type: "image/png",
+      purpose: "maskable",
+    },
+  ],
+},
 
       workbox: {
         cleanupOutdatedCaches: true,
