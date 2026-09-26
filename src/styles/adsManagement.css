@@ -1,0 +1,488 @@
+.ads-admin-page {
+  min-height: 100vh;
+  direction: rtl;
+  background: #f7f8f4;
+  padding: 24px;
+  color: #20352a;
+  font-family: "Tajawal", sans-serif;
+}
+
+.ads-admin-header {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ads-admin-header span {
+  color: #839087;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ads-admin-header h1 {
+  margin: 3px 0 0;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.ads-back-button {
+  width: 43px;
+  height: 43px;
+  border: 1px solid #e1e6df;
+  border-radius: 14px;
+  background: #fff;
+  color: #315f49;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stats */
+
+.ads-admin-stats {
+  max-width: 1100px;
+  margin: 0 auto 22px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.ads-admin-stats > div {
+  min-height: 110px;
+  background: #fff;
+  border: 1px solid #e8ebe5;
+  border-radius: 20px;
+  padding: 17px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.ads-admin-stats svg {
+  color: #4f8668;
+  margin-bottom: 8px;
+}
+
+.ads-admin-stats strong {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.ads-admin-stats span {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #7d8981;
+}
+
+/* Tabs */
+
+.ads-admin-tabs {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+
+  display: flex;
+  gap: 8px;
+
+  padding: 5px;
+  border-radius: 16px;
+  background: #eaeee9;
+}
+
+.ads-admin-tabs button {
+  flex: 1;
+
+  min-height: 45px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: transparent;
+  color: #718077;
+
+  font-family: inherit;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ads-admin-tabs button.active {
+  background: #fff;
+  color: #315f49;
+
+  box-shadow:
+    0 3px 12px
+    rgba(39, 74, 56, 0.07);
+}
+
+.ads-admin-tabs button span {
+  min-width: 21px;
+  height: 21px;
+  border-radius: 20px;
+
+  background: #e7a34a;
+  color: white;
+
+  font-size: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* List */
+
+.ads-admin-list {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  gap: 15px;
+}
+
+.ad-request-card {
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 230px 1fr;
+
+  background: #fff;
+  border: 1px solid #e7ebe5;
+  border-radius: 22px;
+}
+
+.ad-request-image {
+  position: relative;
+  min-height: 230px;
+
+  background: #edf1eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #87958c;
+}
+
+.ad-request-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ad-request-image > span {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+
+  padding: 6px 10px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,.93);
+  color: #9a6a25;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.ad-request-content {
+  padding: 20px;
+}
+
+.ad-request-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.ad-request-title small,
+.published-ad-head small {
+  color: #769080;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ad-request-title h2 {
+  margin: 4px 0 0;
+  font-size: 20px;
+}
+
+.ad-duration {
+  padding: 6px 10px;
+
+  border-radius: 10px;
+
+  background: #f5eee1;
+  color: #9b6a27;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.ad-request-meta {
+  margin: 14px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ad-request-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #76837b;
+  font-size: 12px;
+}
+
+.ad-description {
+  line-height: 1.8;
+  color: #5f6d65;
+  font-size: 13px;
+}
+
+.ad-contact-buttons,
+.ad-review-actions,
+.published-ad-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ad-contact-buttons {
+  margin: 15px 0;
+}
+
+.ad-contact-buttons a,
+.ad-contact-buttons button,
+.ad-review-actions button,
+.published-ad-actions button {
+  min-height: 39px;
+  padding: 0 14px;
+
+  border: 0;
+  border-radius: 11px;
+
+  font-family: inherit;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  text-decoration: none;
+}
+
+.ad-contact-buttons a {
+  background: #edf3ef;
+  color: #315f49;
+}
+
+.ad-contact-buttons button {
+  background: #e9f6ee;
+  color: #24834e;
+}
+
+.approve-ad {
+  background: #315f49;
+  color: white;
+}
+
+.reject-ad {
+  background: #fff0ed;
+  color: #b64b3d;
+}
+
+.delete-request,
+.delete-ad {
+  background: #f5f5f3;
+  color: #a04c45;
+}
+
+/* Published */
+
+.published-ad-card {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+
+  overflow: hidden;
+
+  background: #fff;
+  border: 1px solid #e7ebe5;
+  border-radius: 19px;
+}
+
+.published-ad-card.expired {
+  opacity: .7;
+}
+
+.published-ad-image {
+  min-height: 150px;
+  background: #edf1eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.published-ad-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.published-ad-body {
+  padding: 16px;
+}
+
+.published-ad-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.published-ad-head h3 {
+  margin: 3px 0 0;
+}
+
+.active-status,
+.paused-status,
+.expired-status {
+  height: fit-content;
+  padding: 5px 9px;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.active-status {
+  background: #e7f4eb;
+  color: #2e754c;
+}
+
+.paused-status {
+  background: #fff2db;
+  color: #9a6925;
+}
+
+.expired-status {
+  background: #f2eceb;
+  color: #9a5750;
+}
+
+.published-ad-dates {
+  margin: 12px 0 5px;
+
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+
+  color: #859088;
+  font-size: 11px;
+}
+
+.remaining-days {
+  margin: 7px 0 12px;
+  color: #557362;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.published-ad-actions button {
+  background: #eef2ee;
+  color: #466454;
+}
+
+/* Empty/loading */
+
+.ads-empty,
+.ads-admin-loading {
+  min-height: 260px;
+
+  background: #fff;
+  border: 1px dashed #dce3dc;
+  border-radius: 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #87958c;
+}
+
+.ads-empty h3 {
+  margin: 10px 0 4px;
+  color: #40574a;
+}
+
+.ads-empty p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.spin {
+  animation: ads-spin 1s linear infinite;
+}
+
+@keyframes ads-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .ads-admin-page {
+    padding: 16px 12px 35px;
+  }
+
+  .ads-admin-stats {
+    gap: 7px;
+  }
+
+  .ads-admin-stats > div {
+    min-height: 95px;
+    padding: 12px;
+  }
+
+  .ads-admin-stats strong {
+    font-size: 21px;
+  }
+
+  .ads-admin-stats span {
+    font-size: 10px;
+  }
+
+  .ad-request-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-request-image {
+    height: 190px;
+    min-height: auto;
+  }
+
+  .published-ad-card {
+    grid-template-columns: 100px 1fr;
+  }
+}

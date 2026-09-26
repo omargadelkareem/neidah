@@ -1,0 +1,185 @@
+.admin-login-page {
+  min-height: 100vh;
+  direction: rtl;
+
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(211, 231, 217, .75),
+      transparent 30%
+    ),
+    #f4f6f1;
+
+  display: grid;
+  place-items: center;
+
+  padding: 25px;
+}
+
+.admin-login-card {
+  width: min(100%, 430px);
+
+  padding: 38px 32px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.93);
+
+  box-shadow:
+    0 25px 80px
+    rgba(38, 67, 52, .09);
+
+  text-align: center;
+}
+
+.admin-brand {
+  color: #397b60;
+
+  font-size: 33px;
+  font-weight: 900;
+}
+
+.admin-security-icon {
+  width: 60px;
+  height: 60px;
+
+  margin:
+    25px auto 13px;
+
+  border-radius: 20px;
+
+  background: #e7f1e9;
+
+  color: #397b60;
+
+  display: grid;
+  place-items: center;
+}
+
+.admin-label {
+  color: #397b60;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.admin-login-card h1 {
+  margin-top: 4px;
+
+  font-size: 24px;
+}
+
+.admin-login-description {
+  max-width: 280px;
+
+  margin:
+    7px auto 27px;
+
+  color: #7b867f;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.admin-login-card form {
+  text-align: right;
+}
+
+.admin-login-card label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #526058;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.admin-input {
+  height: 57px;
+
+  margin-top: 7px;
+
+  padding: 0 15px;
+
+  border: 1px solid #edf0ec;
+
+  border-radius: 17px;
+
+  background: #fafbf8;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.admin-input svg {
+  color: #71867a;
+}
+
+.admin-input input {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  font-size: 12px;
+}
+
+.admin-error {
+  margin-bottom: 13px;
+
+  padding: 11px;
+
+  border-radius: 13px;
+
+  background: #f9e9e6;
+
+  color: #a94d43;
+
+  text-align: center;
+
+  font-size: 10px;
+}
+
+.admin-login-button {
+  width: 100%;
+  height: 56px;
+
+  margin-top: 5px;
+
+  border-radius: 17px;
+
+  background: #397b60;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.admin-login-button:disabled {
+  opacity: .7;
+}
+
+.back-to-site {
+  margin-top: 18px;
+
+  background: transparent;
+
+  color: #76817b;
+
+  font-size: 10px;
+}

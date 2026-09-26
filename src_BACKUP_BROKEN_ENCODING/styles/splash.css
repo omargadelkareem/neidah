@@ -1,0 +1,359 @@
+.splash-page {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  overflow: hidden;
+
+  direction: rtl;
+
+  background:
+    linear-gradient(
+      160deg,
+      #f9f7f0 0%,
+      #f4f3e9 48%,
+      #edf3ea 100%
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family:
+    "Tajawal",
+    sans-serif;
+}
+
+/* =========================================
+   Background
+========================================= */
+
+.splash-page::before {
+  content: "";
+
+  position: absolute;
+
+  width: 340px;
+  height: 340px;
+
+  top: -180px;
+  right: -140px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      95,
+      158,
+      114,
+      0.07
+    );
+}
+
+.splash-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  bottom: -160px;
+  left: -130px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      226,
+      164,
+      74,
+      0.07
+    );
+}
+
+.splash-background-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.circle-one {
+  width: 13px;
+  height: 13px;
+
+  top: 22%;
+  left: 18%;
+
+  background: #e2a44a;
+
+  opacity: 0;
+
+  animation:
+    splashDot
+    0.8s ease
+    0.8s forwards;
+}
+
+.circle-two {
+  width: 8px;
+  height: 8px;
+
+  bottom: 25%;
+  right: 18%;
+
+  background: #5f9e72;
+
+  opacity: 0;
+
+  animation:
+    splashDot
+    0.8s ease
+    1s forwards;
+}
+
+/* =========================================
+   Content
+========================================= */
+
+.splash-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.splash-logo-wrapper {
+  width: 195px;
+  height: 195px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+
+  transform:
+    translateY(18px)
+    scale(0.9);
+
+  animation:
+    splashLogoIn
+    0.85s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    0.15s
+    forwards;
+}
+
+.splash-logo-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 13px 22px
+      rgba(33, 81, 57, 0.12)
+    );
+}
+
+/* =========================================
+   Brand
+========================================= */
+
+.splash-brand {
+  margin-top: 4px;
+
+  opacity: 0;
+
+  transform:
+    translateY(12px);
+
+  animation:
+    splashTextIn
+    0.65s ease
+    0.65s forwards;
+}
+
+.splash-brand h1 {
+  margin: 0;
+
+  color: #24573f;
+
+  font-size: 29px;
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+}
+
+.splash-brand p {
+  margin:
+    7px 0 0;
+
+  color: #77887e;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   Bottom
+========================================= */
+
+.splash-bottom {
+  position: absolute;
+
+  z-index: 2;
+
+  bottom:
+    calc(
+      35px +
+      env(safe-area-inset-bottom)
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 11px;
+
+  opacity: 0;
+
+  animation:
+    splashTextIn
+    0.6s ease
+    1s forwards;
+}
+
+.splash-bottom small {
+  color: #9aa49e;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   Loader
+========================================= */
+
+.splash-loader {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.splash-loader span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #4f8668;
+
+  animation:
+    splashLoader
+    1.1s ease-in-out
+    infinite;
+}
+
+.splash-loader span:nth-child(2) {
+  animation-delay:
+    0.14s;
+}
+
+.splash-loader span:nth-child(3) {
+  animation-delay:
+    0.28s;
+}
+
+/* =========================================
+   Animations
+========================================= */
+
+@keyframes splashLogoIn {
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+@keyframes splashTextIn {
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes splashLoader {
+  0%,
+  100% {
+    opacity: 0.3;
+
+    transform:
+      scale(0.75);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+}
+
+@keyframes splashDot {
+  to {
+    opacity: 0.65;
+  }
+}
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+  .splash-logo-wrapper,
+  .splash-brand,
+  .splash-bottom,
+  .splash-loader span,
+  .circle-one,
+  .circle-two {
+    animation: none;
+
+    opacity: 1;
+
+    transform: none;
+  }
+}
